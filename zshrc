@@ -14,6 +14,8 @@ alias ll='ls -lh'
 alias la='ls -A'
 alias df='df -h'
 
+eval $(dircolors -b)
+
 EDITOR=vim
 VISUAL=$EDITOR
 export EDITOR VISUAL
