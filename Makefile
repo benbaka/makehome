@@ -8,8 +8,13 @@ SVIMFILES = vimrc gvimrc
 VIMFILES = $(patsubst %, $(HOME)/.%, $(SVIMFILES))
 SZSHFILES = zlogin zlogout zprofile zshenv zshrc
 ZSHFILES = $(patsubst %, $(HOME)/.%, $(SZSHFILES))
+OBDIR = $(HOME)/.config/openbox
+SOBFILES = menu.xml rc.xml
+OBFILES = $(patsubst %, $(OBDIR)/%, $(SOBFILES))
+SDOTFILES = xinitrc
+DOTFILES = $(patsubst %, $(HOME)/.%, $(SDOTFILES))
 
-home: $(DIRS) $(VIMFILES) $(ZSHFILES)
+home: $(DIRS) $(VIMFILES) $(ZSHFILES) $(OBFILES) $(DOTFILES)
 
 $(DIRS):
 	[ -d $@ ] || mkdir $@
@@ -18,6 +23,16 @@ $(VIMFILES): $(SVIMFILES)
 
 $(ZSHFILES): $(SZSHFILES)
 
+$(OBFILES): $(OBDIR) $(SOBFILES)
+
+$(DOTFILES): $(SDOTFILES)
+
+$(OBDIR):
+	mkdir $(OBDIR)
+
 $(HOME)/.%: %
+	cp $< $@
+
+$(OBDIR)/%: %
 	cp $< $@
 

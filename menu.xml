@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+  <menu id="root-menu" label="Openbox 3">
+    <item label="Terminal">
+      <action name="Execute">
+	<execute>xfce4-terminal</execute>
+      </action>
+    </item>
+
+    <item label="Rox Filer">
+      <action name="Execute">
+	<execute>rox-filer</execute>
+      </action>
+    </item>
+
+    <!--
+    <item label="Firefox">
+      <action name="Execute">
+	<execute>firefox</execute>
+      </action>
+    </item>
+    -->
+
+    <item label="Opera">
+      <action name="Execute">
+	<execute>opera</execute>
+      </action>
+    </item>
+
+    <!--
+    <item label="Thunderbird">
+      <action name="Execute">
+	<execute>thunderbird</execute>
+      </action>
+    </item>
+    -->
+
+    <item label="Mutt MUA">
+      <action name="Execute">
+	<execute>xfce4-terminal --execute mutt</execute>
+      </action>
+    </item>
+
+    <item label="Irssi">
+      <action name="Execute">
+	<execute>xfce4-terminal --fullscreen --execute irssi</execute>
+      </action>
+    </item>
+
+    <item label="Pidgin">
+      <action name="Execute">
+	<execute>pidgin</execute>
+      </action>
+    </item>
+
+    <item label="Anki">
+      <action name="Execute">
+	<execute>anki</execute>
+      </action>
+    </item>
+
+    <item label="Sonata">
+      <action name="Execute">
+	<execute>sonata</execute>
+      </action>
+    </item>
+
+    <separator />
+
+    <item label="Lock Screen">
+      <action name="Execute">
+	<execute>xscreensaver-command -lock</execute>
+      </action>
+    </item>
+
+    <item label="Reconfigure">
+      <action name="Reconfigure" />
+    </item>
+
+    <item label="Restart">
+      <action name="Restart" />
+    </item>
+
+    <item label="Exit">
+      <action name="Exit" />
+    </item>
+  </menu>
+</openbox_menu>
