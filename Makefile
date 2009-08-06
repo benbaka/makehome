@@ -2,7 +2,7 @@
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
 SHELL = /bin/sh
-DIRLIST = bin dl doc etc lib log mail mus pic pkg proj pub tmp vid foo
+DIRLIST = bin dl doc etc lib log mail mus pic pkg proj pub tmp vid
 DIRS = $(patsubst %, $(HOME)/%, $(DIRLIST))
 SVIMFILES = vimrc gvimrc
 VIMFILES = $(patsubst %, $(HOME)/.%, $(SVIMFILES))
