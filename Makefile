@@ -19,14 +19,6 @@ home: $(DIRS) $(VIMFILES) $(ZSHFILES) $(OBFILES) $(DOTFILES)
 $(DIRS):
 	[ -d $@ ] || mkdir $@
 
-$(VIMFILES): $(SVIMFILES)
-
-$(ZSHFILES): $(SZSHFILES)
-
-$(OBFILES): $(OBDIR) $(SOBFILES)
-
-$(DOTFILES): $(SDOTFILES)
-
 $(OBDIR):
 	mkdir $(OBDIR)
 
