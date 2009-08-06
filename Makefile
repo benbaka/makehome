@@ -2,17 +2,21 @@
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
 SHELL = /bin/sh
-DIRS = bin dl doc etc lib log mail mus pic pkg proj pub tmp vid foo
-HDIRS = $(patsubst %, $(HOME)/%, $(DIRS))
-VIMFILES = vimrc gvimrc
-VIM = $(patsubst %, $(HOME)/.%, $(VIMFILES))
+DIRLIST = bin dl doc etc lib log mail mus pic pkg proj pub tmp vid foo
+DIRS = $(patsubst %, $(HOME)/%, $(DIRLIST))
+SVIMFILES = vimrc gvimrc
+VIMFILES = $(patsubst %, $(HOME)/.%, $(SVIMFILES))
+SZSHFILES = zlogin zlogout zprofile zshenv zshrc
+ZSHFILES = $(patsubst %, $(HOME)/.%, $(SZSHFILES))
 
-home: $(HDIRS) $(VIM)
+home: $(DIRS) $(VIMFILES) $(ZSHFILES)
 
-$(HDIRS):
+$(DIRS):
 	[ -d $@ ] || mkdir $@
 
-$(VIM): $(VIMFILES)
+$(VIMFILES): $(SVIMFILES)
+
+$(ZSHFILES): $(SZSHFILES)
 
 $(HOME)/.%: %
 	cp $< $@
