@@ -15,6 +15,7 @@ alias la='ls -A'
 alias df='df -h'
 
 eval $(dircolors -b)
+eval $(lesspipe)
 
 EDITOR=vim
 VISUAL=$EDITOR
