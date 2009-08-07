@@ -1,7 +1,7 @@
 # Personal zsh configuration file.
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
-cdpath=($cdpath ~ ~/proj)
+cdpath=($cdpath ~ ~/proj ..)
 typeset -U path cdpath fpath manpath
 
 setopt histignorealldups
