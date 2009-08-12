@@ -17,3 +17,8 @@ if has("autocmd")
 else
     set autoindent
 endif
+
+iab lc;; Lorenzo Cabrini
+iab lcm;; Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
+iab alc;; Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
+
