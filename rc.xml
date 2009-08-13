@@ -328,19 +328,19 @@
       </action>
     </keybind>
 
-    <!--
     <keybind key="W-w">
       <action name="Execute">
 	<command>firefox</command>
       </action>
     </keybind>
-  -->
 
+  <!--
   <keybind key="W-w">
     <action name="Execute">
       <command>opera</command>
     </action>
   </keybind>
+  -->
 
   <keybind key="W-1">
     <action name="Execute">
