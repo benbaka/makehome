@@ -14,6 +14,7 @@ endif
 
 if has("autocmd")
     filetype plugin indent on
+    autocmd FileType ant setl sw=2 | setl sts=2
 else
     set autoindent
 endif
