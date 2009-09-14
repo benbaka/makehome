@@ -17,12 +17,6 @@ $(SUBDIRS):
 $(DIRS):
 	[ -d $@ ] || mkdir $@
 
-$(OBDIR):
-	mkdir $(OBDIR)
-
 $(HOME)/.%: %
-	cp $< $@
-
-$(OBDIR)/%: %
 	cp $< $@
 
