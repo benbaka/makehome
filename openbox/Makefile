@@ -3,10 +3,10 @@ OBDIR = $(HOME)/.config/openbox
 SRC = menu.xml rc.xml
 TARGETS = $(patsubst %, $(OBDIR)/%, $(SRC))
 
-all: $(TARGETS)
+all: $(OBDIR) $(TARGETS)
 
-$(OBDIR)/%: %
+$(OBDIR)/%: % 
 	cp $< $@
 
-$(DIR):
+$(OBDIR):
 	[ -d $(OBDIR) ] || mkdir $(OBDIR)
