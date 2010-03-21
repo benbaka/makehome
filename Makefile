@@ -8,14 +8,11 @@ DIRS = $(patsubst %, $(HOME)/%, $(DIRLIST))
 SDOTFILES = xinitrc
 DOTFILES = $(patsubst %, $(HOME)/.%, $(SDOTFILES))
 
-home: $(SUBDIRS) $(DIRS) $(DOTFILES)
+home: $(SUBDIRS) $(DOTFILES)
 
 .PHONY: $(SUBDIRS)
 $(SUBDIRS):
 	cd $@ && make
-
-$(DIRS):
-	[ -d $@ ] || mkdir $@
 
 $(HOME)/.%: %
 	cp $< $@
