@@ -13,6 +13,7 @@ alias ls='ls --color -F'
 alias ll='ls -lh'
 alias la='ls -A'
 alias df='df -h'
+alias grep='grep --color=auto'
 
 eval $(dircolors -b)
 eval $(lesspipe)
