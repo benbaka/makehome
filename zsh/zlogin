@@ -1,6 +1,6 @@
 # Personal zsh configuration file.
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
-if [[ -n $(whence fortune ]]; then
+if [[ -n $(whence fortune) ]]; then
     fortune
 fi
